@@ -11,12 +11,12 @@
 
 解决办法:
 
-[	设置passive为false](<https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener>)
+[设置passive为false](<https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener>)
 
 
 
-###2.跨域给localStorage带来的问题
-2020-5-7
+### 2.跨域给localStorage带来的问题  (2020-5-7)
+
 和pp体育合作的项目，点击轮播图跳转到其他模块时，网页导航栏被刘海(苹果特色)遮住了。
 
 
