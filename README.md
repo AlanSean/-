@@ -5,7 +5,7 @@
 
 
 
-### 1.下拉刷新的问题
+## 1.下拉刷新的问题
 
 绑定事件时preventDefault 无效 
 
@@ -15,7 +15,7 @@
 
 
 
-### 2.跨域给localStorage带来的问题  (2020-5-7)
+## 2.跨域给localStorage带来的问题  (2020-5-7)
 
 和pp体育合作的项目，点击轮播图跳转到其他模块时，网页导航栏被刘海(苹果特色)遮住了。
 
@@ -29,3 +29,19 @@
     经过核实 发现跳转链接是http  网站是https 协议不同所以是跨域了
 5. 找后台让她将写死的协议http:// 改为 // 
 
+
+
+## 3.python 使用vscode import的问题
+
+import时 总是提示 unresolved import XXX 
+
+
+```
+解决办法:
+    打开vscode设置 - 搜索jedi - 第一个打勾
+    launch.json添加
+    "env": {
+        "PYTHONPATH": "${workspaceRoot}"
+    },
+    "envFile": "${workspaceFolder}/.env"
+```
