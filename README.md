@@ -1,40 +1,32 @@
 遇到的兼容问题记录
 
-
 [TOC]
-
-
 
 ## 1.下拉刷新的问题
 
-绑定事件时preventDefault 无效 
+绑定事件时 preventDefault 无效
 
 解决办法:
 
-[设置passive为false](<https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener>)
+[设置 passive 为 false](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
+## 2.跨域给 localStorage 带来的问题 (2020-5-7)
 
+和 pp 体育合作的项目，点击轮播图跳转到其他模块时，网页导航栏被刘海(苹果特色)遮住了。
 
-## 2.跨域给localStorage带来的问题  (2020-5-7)
-
-和pp体育合作的项目，点击轮播图跳转到其他模块时，网页导航栏被刘海(苹果特色)遮住了。
-
-解决办法: 
+解决办法:
 
 1.  先定位是不是计算的手机状态栏高度的问题(无问题)
-2. 看看是不是本地存储，再次取出时有没有问题
-    (站内路由跳转无问题，点击轮播图是直接使用location跳转，发现跳转后本地的值没了)
-3. 先查看代码删除localStorage逻辑(无问题)
-4. 猜测值还在，可能是跨域了所以取不到了
-    经过核实 发现跳转链接是http  网站是https 协议不同所以是跨域了
-5. 找后台让她将写死的协议http:// 改为 // 
+2.  看看是不是本地存储，再次取出时有没有问题
+    (站内路由跳转无问题，点击轮播图是直接使用 location 跳转，发现跳转后本地的值没了)
+3.  先查看代码删除 localStorage 逻辑(无问题)
+4.  猜测值还在，可能是跨域了所以取不到了
+    经过核实 发现跳转链接是 http 网站是 https 协议不同所以是跨域了
+5.  找后台让她将写死的协议 http:// 改为 //
 
+## 3.python 使用 vscode import 的问题
 
-
-## 3.python 使用vscode import的问题
-
-import时 总是提示 unresolved import XXX 
-
+import 时 总是提示 unresolved import XXX
 
 ```
 解决办法:
@@ -45,3 +37,19 @@ import时 总是提示 unresolved import XXX
     },
     "envFile": "${workspaceFolder}/.env"
 ```
+
+## 4. 第三方 mac 环境配置问题
+
+node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
+
+权限问题 运行下面命令 进行修改权限
+
+`sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
+
+## 5. 第三方 mac 环境配置问题
+
+node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
+
+权限问题 运行下面命令 进行修改权限
+
+`sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
