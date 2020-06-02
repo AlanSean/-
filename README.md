@@ -45,11 +45,3 @@ node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
 权限问题 运行下面命令 进行修改权限
 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
-
-## 5. 第三方 mac 环境配置问题
-
-node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
-
-权限问题 运行下面命令 进行修改权限
-
-`sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
