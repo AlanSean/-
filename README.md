@@ -45,3 +45,10 @@ node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
 权限问题 运行下面命令 进行修改权限
 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
+
+
+
+## 5. videojs横屏 x5层级问题 2020-6-30
+
+[x5层级问题](https://x5.tencent.com/tbs/guide/video.html)
+[videojs横屏插件](https://github.com/prateekrastogi/videojs-landscape-fullscreen)
