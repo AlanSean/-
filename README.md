@@ -52,3 +52,6 @@ node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
 
 [x5层级问题](https://x5.tencent.com/tbs/guide/video.html)
 [videojs横屏插件](https://github.com/prateekrastogi/videojs-landscape-fullscreen)
+
+央视m3u8流 http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8
+type: 'application/x-mpegURL'
