@@ -46,11 +46,16 @@ node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
 
+## 5. videojs横屏 x5层级问题 2020-6-30
+
+[x5层级问题](https://x5.tencent.com/tbs/guide/video.html)
+[videojs横屏插件](https://github.com/prateekrastogi/videojs-landscape-fullscreen)
+
+央视m3u8流 http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8
+type: 'application/x-mpegURL'
 
 
-
-
-## 5. 提示添加到主屏幕  A2HS
+## 6. 提示添加到主屏幕  A2HS
 
 经过调研 只有安装chrome 支持此主动提示
 iphone里 只有safir是真浏览器 
