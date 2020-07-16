@@ -45,3 +45,16 @@ node 版本低 [mac 参考升级](https://www.jianshu.com/p/71c82fc63522)
 权限问题 运行下面命令 进行修改权限
 
 `sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}`
+
+
+
+
+
+## 5. 提示添加到主屏幕  A2HS
+
+经过调研 只有安装chrome 支持此主动提示
+iphone里 只有safir是真浏览器 
+
+[添加到主屏幕](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps/%E6%B7%BB%E5%8A%A0%E5%88%B0%E4%B8%BB%E5%B1%8F%E5%B9%95)
+[示例](https://mdn.github.io/pwa-examples/a2hs/)
+[相关资料](https://love2dev.com/pwa/add-to-homescreen-library/)
