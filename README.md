@@ -63,3 +63,20 @@ iphone里 只有safir是真浏览器
 [添加到主屏幕](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps/%E6%B7%BB%E5%8A%A0%E5%88%B0%E4%B8%BB%E5%B1%8F%E5%B9%95)
 [示例](https://mdn.github.io/pwa-examples/a2hs/)
 [相关资料](https://love2dev.com/pwa/add-to-homescreen-library/)
+
+
+
+
+## 7.  安卓软键盘遮挡输入框 以及 ios 软键盘顶起页面导致页面上移问题 （老问题了，只能根据页面来选择性优化）
+
+
+介绍： 
+    页面是固定一屏高度 专家列表以及聊天室是动态高度根据不同屏幕来自适应高度来实现一屏幕效果。
+
+
+[事故页面](wx.catjc.com/#/walkman)
+
+安卓：把输入框定位属性改为 `fixed` 即可 安卓键盘像是把页面渲染高度缩小了。
+ios： ios软键盘则是直接在把整体页面顶起 并且页面变为可滚动（可监听到页面滚动）
+ios环境下 输入框聚焦时 监听滚动条滚动距离x，然后将x赋值到输入框的 `bottom:x +'px'` 即可。 缺点：页面还是可滚动。
+ 
