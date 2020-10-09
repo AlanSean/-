@@ -90,7 +90,7 @@ meta-viewport 添加 viewport-fit=cover
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,viewport-fit=cover" />
 
-@supports (constant( safe-area-inset-bottom) or bottom: env(safe-area-inset-bottom)) {
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) { 
     
     .tabbar{
         padding-bottom: constant( safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
