@@ -80,3 +80,22 @@ iphone里 只有safir是真浏览器
 ios： ios软键盘则是直接在把整体页面顶起 并且页面变为可滚动（可监听到页面滚动）
 ios环境下 输入框聚焦时 监听滚动条滚动距离x，然后将x赋值到输入框的 `bottom:x +'px'` 即可。 缺点：页面还是可滚动。
  
+
+ ## 8. ipx以上在webview的底部导航条兼容问题
+
+
+
+meta-viewport 添加 viewport-fit=cover
+以及 媒体查询 @supports
+```
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,viewport-fit=cover" />
+
+@supports (constant( safe-area-inset-bottom) or bottom: env(safe-area-inset-bottom)) {
+    
+    .tabbar{
+        padding-bottom: constant( safe-area-inset-bottom); /* 兼容 iOS < 11.2 */
+        padding-bottom: env( safe-area-inset-bottom); /* 兼容 iOS >= 11.2 */
+    }
+}
+
+```
