@@ -99,3 +99,35 @@ meta-viewport 添加 viewport-fit=cover
 }
 
 ```
+
+## 8. react 某元素 xxx.addEventListener('xxx')  绑定`原生事件`无法阻止冒泡
+
+* 场景: 
+
+    一个页面 父组件监听了 `touchStart touchMove touchEnd`  
+
+   子组件弹窗时 不想触发父组件的 `原生事件` 
+
+
+* 注: 
+
+     阻止原生事件,只能通过判断标签
+    父组件所监听的`touch`系列事件 基本需要大部分元素有效
+    
+
+* 解决办法:
+
+    将父组件的`原生事件`改为`react的合成事件`
+
+    子组件注册`react合成事件` 并调用 `e.stopPropagation()`
+
+     ```
+    //父组件
+    div.addEventListener('touchstart', this.touchStart);
+    改为
+    <div  onTouchStart={this.touchStart}></div>
+
+    //子组件
+    <div  onTouchStart={e => e.stopPropagation()}></div>
+
+    ```
