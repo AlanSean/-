@@ -115,7 +115,7 @@ meta-viewport 添加 viewport-fit=cover
     父组件所监听的`touch`系列事件 基本需要大部分元素有效
     
 
-* 解决办法:
+* 解决办法 旧 存在不兼容 阻止ios滑屏事件:
 
     将父组件的`原生事件`改为`react的合成事件`
 
@@ -131,3 +131,28 @@ meta-viewport 添加 viewport-fit=cover
     <div  onTouchStart={e => e.stopPropagation()}></div>
 
     ```
+* 解决办法 新: 
+
+    父组件继续使用`原生事件`,子组件也使用`原生事件`
+    
+    ```
+    div.addEventListener('touchstart', this.touchStart,{passive: false});
+    div.addEventListener('touchmove', this.touchMove,{passive: false});
+    div.addEventListener('touchend', this.touchEnd,{passive: false});
+
+    //离开页面记得卸载 xxx.removeEventListener(....)
+
+
+    //子组件 只需要阻止移动 事件即可
+    div.addEventListener('touchmove', this.touchmove,{passive: false});
+
+    touchmove =  e => {
+        //阻止浏览器滚动
+        e.preventDefault();
+        //阻止冒泡
+        e.stopPropagation();
+    }
+
+    ```
+
+
