@@ -166,6 +166,7 @@ html添加 `<meta http-equiv="cache-control" content="no-cache">`
 
 ##  SameSite Strict导致的问题--safir出现的
 
+```
     场景： 网页支付成功后跳转过来读取不到cookie
 
     解决思路 用iphone和mac 联调 发现存储的cookie为SameSite=Strict
@@ -175,3 +176,5 @@ html添加 `<meta http-equiv="cache-control" content="no-cache">`
         1. 页面初次加载时，判断本地是否有cookie
         2. 有cookie就读取cookie并存储在内存中
         3.删除cookie 重新存储cookie即可
+
+```
