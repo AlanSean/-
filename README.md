@@ -179,3 +179,9 @@ html添加 `<meta http-equiv="cache-control" content="no-cache">`
 
 ```
 
+
+
+## vscode  chtrl+` 打不开终端的问题
+
+
+输入法 拦截了 ctrl快捷键，修改输入法快捷键即可
